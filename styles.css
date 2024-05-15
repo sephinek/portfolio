@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --max-width: 1240px;
+  --hero-max-width: 1400px;
+  --bg-navbar: rgba(255, 255, 255, 40%);
+  --color-black: #3d3d3d;
+  --color-white: #fafafa;
+  --color-brand: #f0e691;
+  --color-yellow-dark: #e1ce1e;
+  --font-jacques: 'Jacques Francois Shadow', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-family: 'jost', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+/* Common */
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.yellow {
+  color: var(--color-brand);
+}
+
+/* HEADER (NAVIGATION BAR) */
+.header {
+  background-color: var(--bg-navbar);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: 100%;
+}
+
+.logo {
+  width: 27px;
+  height: auto;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.nav-menu {
+  padding-bottom: 3px;
+  transition: filter 150ms;
+}
+
+.nav-menu:not(.active) {
+  border-bottom: 1px solid transparent;
+}
+
+.nav-menu.active {
+  border-bottom: 1px solid var(--color-black);
+}
+
+.nav-menu:hover {
+  filter: brightness(180%);
+}
+
+.btn-contact {
+  color: var(--color-yellow-dark);
+  background-color: var(--color-white);
+  border-radius: 25px;
+  border: 0;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 10px 18px;
+  letter-spacing: 0.5px;
+  box-shadow: 0.5px 0.5px 5px #dcdcdc;
+}
+
+.main {
+  position: relative;
+}
+
+.main section {
+  padding-top: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container {
+  max-width: var(--max-width);
+  height: 100%;
+}
+
+/* NAVIGATION BUTTONS in the MAIN SECTION */
+.nav-btns {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding-top: 15px;
+  background-color: rgba(213, 213, 213, 54%);
+  border: 1px solid #c7c7c7;
+  border-radius: 25px;
+  width: 6rem;
+  height: 25rem;
+  z-index: 100;
+}
+
+.btn-nav.active {
+  transform: scale(1.1);
+}
+
+.btn-nav:not(.active) {
+  transition: transform 100ms ease-out;
+}
+
+.btn-nav:not(.active):hover {
+  transform: scale(1.25);
+}
+
+.star-btn-img {
+  width: 45px;
+  height: auto;
+}
+
+/* HERO SECTION */
+.hero {
+  background: url('/img/hero-bg.png') no-repeat center/100%;
+  height: 90rem;
+}
+
+.hero-container {
+  position: relative;
+  margin: 1.6rem;
+  border: #fff solid 1px;
+  border-radius: 10px;
+  height: 70rem;
+  width: fit-screen;
+}
+
+.hero-block {
+  display: flex;
+  flex-direction: column;
+  margin: 12rem auto 0;
+  max-width: var(--hero-max-width);
+}
+
+.greeting {
+  font-family: var(--font-jacques);
+  font-size: 10rem;
+  font-weight: 400;
+  letter-spacing: -5px;
+}
+
+.title {
+  font-family: var(--font-jacques);
+  font-size: 12.8rem;
+  font-weight: 400;
+  letter-spacing: -4px;
+  color: #fff;
+  text-shadow: 0 10px 4px rgba(0, 0, 0, 25%);
+  margin-top: -2rem;
+}
+
+.position {
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 13.7px rgba(0, 0, 0, 25%);
+  margin-top: 4.5rem;
+}
+
+.lets-go-block {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lets-go-text {
+  margin-bottom: -5px;
+}
+
+.btn-arrow-down {
+  width: 85px;
+  height: auto;
+  margin-bottom: -5px;
+  transition: transform 150ms ease;
+}
+
+.btn-arrow-down:hover {
+  transform: translateY(-3px);
+}
