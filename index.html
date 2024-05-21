@@ -7,6 +7,8 @@
       name="description"
       content="Web Developer Portfolio created by JavaScript/HTML/CSS"
     />
+    <meta name="author" content="Soohyun Sephine Kang" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
     <title>Soohyun Sephine Kang's Portfolio</title>
     <script src="script.js" defer></script>
@@ -69,28 +71,120 @@
         </button>
       </div>
 
-      <section class="hero">
+      <section id="hero" class="hero">
         <div class="hero-container">
           <div class="hero-block">
             <h2 class="greeting">Welcome!</h2>
             <h1 class="title">I'm <span class="yellow">S</span>ephine.</h1>
             <h2 class="position">Web Developer & Designer</h2>
 
-            <div class="lets-go-block">
-              <p class="lets-go-text">Let's go!</p>
+            <div class="next-section-block">
+              <p class="next-section-text">Let's go!</p>
               <button class="btn-arrow-down">
                 <img
                   class="btn-arrow-down"
                   src="/img/arrow-down.png"
-                  alt="Animated button to scroll down"
+                  alt="Animated button to scroll down to the next section"
                 />
               </button>
             </div>
           </div>
         </div>
       </section>
-    </main>
 
-    <footer>Footer</footer>
+      <section id="about" class="about">
+        <div class="section-container">
+          <h2 class="section-heading">About Me</h2>
+          <div class="about-text-block">
+            <p class="about-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget
+              aliquet nibh praesent tristique. Orci nulla pellentesque dignissim
+              enim. 
+            </p>
+            <p class="about-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget
+              aliquet nibh praesent tristique. Orci nulla pellentesque dignissim
+              enim. 
+            </p>
+          </div>
+          <img
+            src="/img/about-img.png"
+            alt="Soohyun Sephine Kang wearing denim jacket is smiling"
+            class="about-img"
+          />
+
+          <div class="next-section-block">
+            <p class="next-section-text">Read more!</p>
+            <button class="btn-arrow-down">
+              <img
+                class="btn-arrow-down"
+                src="/img/arrow-down.png"
+                alt="Animated button to scroll down to the next section"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="section-container">
+          <h2 class="section-heading">Projects</h2>
+          <div class="projects-container">
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+          </div>
+
+          <div class="next-section-block">
+            <p class="next-section-text">Finally!</p>
+            <button class="btn-arrow-down">
+              <img
+                class="btn-arrow-down"
+                src="/img/arrow-down.png"
+                alt="Animated button to scroll down to the next section"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="section-container">
+          <h2 class="section-heading">Contact Me</h2>
+          <p class="contact-paragraph">If you want to talk, Contact me here!</p>
+
+          <form class="contact-form">
+            <div class="form-top">
+              <div class="form-block">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+
+              <div class="form-block">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+            </div>
+
+            <div class="form-block">
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="messsage"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn-contact"><a href="#">Send a message</a></button>
+          </form>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

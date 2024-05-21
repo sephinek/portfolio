@@ -6,6 +6,7 @@
   --bg-navbar: rgba(255, 255, 255, 40%);
   --color-black: #3d3d3d;
   --color-white: #fafafa;
+  --color-grey: #dfdfdf;
   --color-brand: #f0e691;
   --color-yellow-dark: #e1ce1e;
   --font-jacques: 'Jacques Francois Shadow', serif;
@@ -34,7 +35,6 @@ body {
 }
 
 /* Common */
-
 li {
   list-style: none;
 }
@@ -52,6 +52,97 @@ button {
 
 .yellow {
   color: var(--color-brand);
+}
+
+.main {
+  position: relative;
+  height: 100%;
+}
+
+.main section:not(.hero) {
+  width: 100%;
+  max-height: max-content;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid transparent;
+  padding-bottom: 5px;
+  border-bottom: var(--color-grey) solid 1px;
+}
+
+.section-container {
+  position: relative;
+  max-width: var(--max-width);
+  height: 100%;
+}
+
+.section-heading {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  margin: 8rem 0 5rem 0;
+}
+
+.next-section-block {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.next-section-text {
+  margin-bottom: -5px;
+}
+
+.btn-arrow-down {
+  width: 85px;
+  height: 100%;
+  margin-bottom: -5px;
+  transition: transform 150ms ease;
+}
+
+.btn-arrow-down:hover {
+  transform: translateY(-3px);
+}
+
+/* NAVIGATION BUTTONS in the MAIN SECTION */
+.nav-btns {
+  position: fixed;
+  top: 50%;
+  right: 25%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding-top: 15px;
+  background-color: rgba(213, 213, 213, 54%);
+  border: 1px solid #c7c7c7;
+  border-radius: 25px;
+  width: 6rem;
+  height: 25rem;
+  z-index: 100;
+}
+
+.btn-nav.active {
+  transform: scale(1.1);
+}
+
+.btn-nav:not(.active) {
+  transition: transform 100ms ease-out;
+}
+
+.btn-nav:not(.active):hover {
+  transform: scale(1.25);
+}
+
+.star-btn-img {
+  width: 45px;
+  height: auto;
 }
 
 /* HEADER (NAVIGATION BAR) */
@@ -104,7 +195,16 @@ button {
 
 .btn-contact {
   color: var(--color-yellow-dark);
-  background-color: var(--color-white);
+  background: linear-gradient(var(--color-white), var(--color-white))
+      padding-box,
+    linear-gradient(
+        to right,
+        rgba(144, 143, 143, 49%) 0%,
+        rgba(250, 253, 128, 65%) 59%,
+        rgba(238, 241, 79, 57%) 66%,
+        rgba(130, 130, 130, 51%) 100%
+      )
+      border-box;
   border-radius: 25px;
   border: 0;
   font-weight: 600;
@@ -112,64 +212,15 @@ button {
   padding: 10px 18px;
   letter-spacing: 0.5px;
   box-shadow: 0.5px 0.5px 5px #dcdcdc;
-}
-
-.main {
-  position: relative;
-}
-
-.main section {
-  padding-top: 50px;
-  width: 100%;
-  height: 100%;
-}
-
-.main-container {
-  max-width: var(--max-width);
-  height: 100%;
-}
-
-/* NAVIGATION BUTTONS in the MAIN SECTION */
-.nav-btns {
-  position: absolute;
-  top: 50%;
-  right: 25%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  padding-top: 15px;
-  background-color: rgba(213, 213, 213, 54%);
-  border: 1px solid #c7c7c7;
-  border-radius: 25px;
-  width: 6rem;
-  height: 25rem;
-  z-index: 100;
-}
-
-.btn-nav.active {
-  transform: scale(1.1);
-}
-
-.btn-nav:not(.active) {
-  transition: transform 100ms ease-out;
-}
-
-.btn-nav:not(.active):hover {
-  transform: scale(1.25);
-}
-
-.star-btn-img {
-  width: 45px;
-  height: auto;
+  border: 1px solid transparent;
 }
 
 /* HERO SECTION */
 .hero {
   background: url('/img/hero-bg.png') no-repeat center/100%;
-  height: 90rem;
+  height: auto;
+  border: 1px solid transparent;
+  padding-top: 50px;
 }
 
 .hero-container {
@@ -214,27 +265,127 @@ button {
   margin-top: 4.5rem;
 }
 
-.lets-go-block {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+/* ABOUT SECTION */
+.about {
+  background: url('/img/about-bg.png');
+  height: 80rem;
+}
+
+.about-paragraph {
+  width: 70rem;
+}
+
+.about-paragraph:first-of-type {
+  margin-bottom: 3.4rem;
+}
+
+.about-img {
+  margin-top: 7rem;
+}
+
+/* PROJECTS SECTION */
+.projects {
+  background: url('/img/projects-bg.png');
+}
+
+.projects-heading {
+  font-family: var(--font-jacques);
+  font-size: 7rem;
+  letter-spacing: 4%;
+  color: #b1b1b1;
+  -webkit-text-stroke: 0.1px #fff;
+  text-shadow: 0 6px 4px rgba(0, 0, 0, 25%);
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  column-gap: 3rem;
+  row-gap: 3rem;
+  margin-bottom: 20rem;
+}
+
+.project {
+  border: 1px solid var(--color-grey);
+  border-radius: 27px;
+  height: 40rem;
+  width: 30rem;
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 20%);
+}
+
+/* CONTACT SECTION */
+.contact {
+  background: url('/img/contact-bg.png');
+}
+
+.contact-paragraph {
+  font-size: 1.8rem;
+  letter-spacing: 4%;
+  text-align: left;
+  margin: 0 0 3.5rem 3rem;
+}
+
+.contact-form {
+  padding: 5.4rem;
+  background-color: rgba(233, 233, 233, 20%);
+  border: #d1d1d1 solid 1px;
+  border-radius: 27px;
+  width: 90rem;
+  box-shadow: 5px 3px 26.5px rgba(153, 153, 153, 25%);
+  margin-bottom: 10rem;
+}
+
+.form-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.form-block {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: left;
+  gap: 1rem;
 }
 
-.lets-go-text {
-  margin-bottom: -5px;
+.contact-form label {
+  font-size: 1.6rem;
+  color: #4a4a4a;
 }
 
-.btn-arrow-down {
-  width: 85px;
-  height: auto;
-  margin-bottom: -5px;
-  transition: transform 150ms ease;
+.contact-form input,
+.contact-form textarea {
+  background-color: rgba(255, 255, 255, 78%);
+  border: #ebebeb 1px solid;
+  border-radius: 2px;
+  outline: none;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: inherit;
 }
 
-.btn-arrow-down:hover {
-  transform: translateY(-3px);
+.contact-form input {
+  height: 4rem;
+  width: 35rem;
+}
+
+.contact-form textarea {
+  padding: 0.5rem 1rem;
+}
+
+.contact-form .btn-contact {
+  padding: 12px 45px;
+  background: linear-gradient(var(--color-white), var(--color-white))
+      padding-box,
+    linear-gradient(
+        to right,
+        rgba(144, 143, 143, 49%) 0%,
+        rgba(250, 253, 128, 65%) 84%,
+        rgba(130, 130, 130, 51%) 100%
+      )
+      border-box;
+  border: 1px solid transparent;
+  margin-top: 4rem;
 }
