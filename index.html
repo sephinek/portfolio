@@ -16,24 +16,26 @@
   <body>
     <header class="header">
       <div class="header-container">
-        <img
-          class="logo"
-          src="img/s-logo.png"
-          alt="Yellow initial S logo with thick white border"
-        />
+        <a href="/">
+          <img
+            class="logo"
+            src="img/s-logo.png"
+            alt="Yellow initial S logo with thick white border"
+          />
+        </a>
 
         <nav class="nav">
           <ul class="nav-container">
-            <li class="nav-menu active">
-              <a href="/">Home</a>
+            <li class="nav-menu nav-menu-hero active">
+              <a href="#hero">Home</a>
             </li>
-            <li class="nav-menu">
-              <a href="#">About</a>
+            <li class="nav-menu nav-menu-about">
+              <a href="#about">About</a>
             </li>
-            <li class="nav-menu">
-              <a href="#">Projects</a>
+            <li class="nav-menu nav-menu-projects">
+              <a href="#projects">Projects</a>
             </li>
-            <button class="btn-contact"><a href="#">Contact</a></button>
+            <button class="btn-contact"><a href="#contact">Contact</a></button>
           </ul>
         </nav>
       </div>
@@ -41,33 +43,45 @@
 
     <main class="main">
       <div class="nav-btns">
-        <button class="btn-nav active">
-          <img
-            class="star-btn-img"
-            src="/img/star-btn-active.png"
-            alt="Button to Hero"
-          />
+        <button class="btn-nav" id="btn-hero">
+          <a href="#hero">
+            <img
+              class="star-btn-img star-btn-img-hero"
+              src="/img/star-btn-active.png"
+              alt="Button to Hero"
+              title="Home"
+            />
+          </a>
         </button>
-        <button class="btn-nav">
-          <img
-            class="star-btn-img"
-            src="/img/star-btn-inactive.png"
-            alt="Button to About"
-          />
+        <button class="btn-nav" id="btn-about">
+          <a href="#about">
+            <img
+              class="star-btn-img star-btn-img-about"
+              src="/img/star-btn-inactive.png"
+              alt="Button to About"
+              title="About"
+            />
+          </a>
         </button>
-        <button class="btn-nav">
-          <img
-            class="star-btn-img"
-            src="/img/star-btn-inactive.png"
-            alt="Button to Projects"
-          />
+        <button class="btn-nav" id="btn-projects">
+          <a href="#projects">
+            <img
+              class="star-btn-img star-btn-img-projects"
+              src="/img/star-btn-inactive.png"
+              alt="Button to Projects"
+              title="Projects"
+            />
+          </a>
         </button>
-        <button class="btn-nav">
-          <img
-            class="star-btn-img"
-            src="/img/star-btn-inactive.png"
-            alt="Button to Contact"
-          />
+        <button class="btn-nav" id="btn-contact">
+          <a href="#contact">
+            <img
+              class="star-btn-img star-btn-img-contact"
+              src="/img/star-btn-inactive.png"
+              alt="Button to Contact"
+              title="Contact"
+            />
+          </a>
         </button>
       </div>
 
@@ -132,7 +146,13 @@
         <div class="section-container">
           <h2 class="section-heading">Projects</h2>
           <div class="projects-container">
-            <div class="project"></div>
+            <div class="project">
+              <img
+                class="project-thumbnail project-thumbnail-blur"
+                src="./data/imgs/document-scanner-thumbnail.png"
+              />
+              <div class="project-info-on-hover"></div>
+            </div>
             <div class="project"></div>
             <div class="project"></div>
             <div class="project"></div>
@@ -186,5 +206,21 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-email-block">
+          <img
+            src="/img/email-icon.png"
+            class="email-icon"
+            alt="yellowish gradient email icon"
+          />
+          <p class="footer-email">sephine.k31@gmail.com</p>
+        </div>
+        <p class="copyright">
+          &copy; ️2024 Soohyun Sephine Kang · All rights reserved
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

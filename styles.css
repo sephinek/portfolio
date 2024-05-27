@@ -20,6 +20,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -56,7 +57,7 @@ button {
 
 .main {
   position: relative;
-  height: 100%;
+  height: max-content;
 }
 
 .main section:not(.hero) {
@@ -112,7 +113,7 @@ button {
 .nav-btns {
   position: fixed;
   top: 50%;
-  right: 25%;
+  right: 20%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -268,7 +269,8 @@ button {
 /* ABOUT SECTION */
 .about {
   background: url('/img/about-bg.png');
-  height: 80rem;
+  background-size: 100% 100%;
+  height: 100vh;
 }
 
 .about-paragraph {
@@ -312,11 +314,22 @@ button {
   height: 40rem;
   width: 30rem;
   box-shadow: 1px 4px 15px rgba(0, 0, 0, 20%);
+  cursor: pointer;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+.project-thumbnail-blur {
+  filter: blur(10px);
 }
 
 /* CONTACT SECTION */
 .contact {
-  background: url('/img/contact-bg.png');
+  background: url('/img/contact-bg.png') center;
+  border-bottom: none !important;
 }
 
 .contact-paragraph {
@@ -327,11 +340,11 @@ button {
 }
 
 .contact-form {
-  padding: 5.4rem;
+  padding: 5rem;
   background-color: rgba(233, 233, 233, 20%);
   border: #d1d1d1 solid 1px;
   border-radius: 27px;
-  width: 90rem;
+  width: 85rem;
   box-shadow: 5px 3px 26.5px rgba(153, 153, 153, 25%);
   margin-bottom: 10rem;
 }
@@ -388,4 +401,33 @@ button {
       border-box;
   border: 1px solid transparent;
   margin-top: 4rem;
+}
+
+/* FOOTER */
+.footer {
+  color: #4a4a4a;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 20rem;
+}
+
+.footer-email-block {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.copyright {
+  font-size: 1.3rem;
 }
