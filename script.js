@@ -1,3 +1,5 @@
+'use strict';
+
 const sections = document.querySelectorAll('section[id]');
 const projectsContainer = document.querySelector('.projects-container');
 
@@ -64,20 +66,54 @@ async function loadProjects() {
     projectThumbnail.classList.add('project-thumbnail');
     projectThumbnail.src = `./data/${projectData.thumbnail}`;
 
-    projectEl.append(projectThumbnail);
+    const infoOnHover = document.createElement('div');
+    infoOnHover.classList.add('project-info-on-hover', 'hidden');
 
-    const onHoverInfo = document.createElement('div');
+    const logo = document.createElement('img');
+    logo.src = `./data/${projectData.logo}`;
+    logo.classList.add('project-logo');
+
+    const title = document.createElement('h3');
+    title.classList.add('project-title');
+    title.textContent = projectData.title;
+
+    const descriptionBlock = document.createElement('div');
+    descriptionBlock.classList.add('project-block');
+    descriptionBlock.innerHTML = `<h4 class="project-label">Description:</h4>
+    <p class="project-description">
+      ${projectData.description}
+    </p>`;
+    const stacksBlock = document.createElement('div');
+    stacksBlock.classList.add('project-block');
+    stacksBlock.innerHTML = `<h4 class="project-label">Stacks:</h4>
+    <p class="project-stacks">
+      ${projectData.stacks}
+    </p>`;
+
+    infoOnHover.append(logo);
+    infoOnHover.append(title);
+    infoOnHover.append(descriptionBlock);
+    infoOnHover.append(stacksBlock);
+
+    projectEl.append(projectThumbnail);
+    projectEl.append(infoOnHover);
+
+    projectEl.addEventListener('click', () => {
+      window.open(projectData.url, '_blank').focus();
+    });
 
     projectEl.addEventListener('mouseover', () => {
       projectThumbnail.classList.add('project-thumbnail-blur');
+      infoOnHover.classList.remove('hidden');
     });
 
     projectEl.addEventListener('mouseleave', () => {
       projectThumbnail.classList.remove('project-thumbnail-blur');
+      infoOnHover.classList.add('hidden');
     });
 
     projectsContainer.append(projectEl);
   });
 }
 
-// loadProjects();
+loadProjects();

@@ -1,3 +1,5 @@
+<?php include 'mail.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -145,20 +147,7 @@
       <section id="projects" class="projects">
         <div class="section-container">
           <h2 class="section-heading">Projects</h2>
-          <div class="projects-container">
-            <div class="project">
-              <img
-                class="project-thumbnail project-thumbnail-blur"
-                src="./data/imgs/document-scanner-thumbnail.png"
-              />
-              <div class="project-info-on-hover"></div>
-            </div>
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
-          </div>
+          <div class="projects-container"></div>
 
           <div class="next-section-block">
             <p class="next-section-text">Finally!</p>
@@ -178,7 +167,8 @@
           <h2 class="section-heading">Contact Me</h2>
           <p class="contact-paragraph">If you want to talk, Contact me here!</p>
 
-          <form class="contact-form">
+          <form class="contact-form" method="POST" action="mail.php">
+            <div class="form-error hidden">Error occurred</div>
             <div class="form-top">
               <div class="form-block">
                 <label for="name">Name</label>
@@ -201,7 +191,9 @@
               ></textarea>
             </div>
 
-            <button class="btn-contact"><a href="#">Send a message</a></button>
+            <button type="submit" class="btn-contact">
+              <a href="#">Send a message</a>
+            </button>
           </form>
         </div>
       </section>
