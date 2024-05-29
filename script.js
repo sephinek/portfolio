@@ -62,12 +62,14 @@ async function loadProjects() {
     const projectEl = document.createElement('div');
     projectEl.classList.add('project');
 
+    const projectThumbnailContainer = document.createElement('div');
     const projectThumbnail = document.createElement('img');
+    projectThumbnailContainer.classList.add('project-thumbnail-container');
     projectThumbnail.classList.add('project-thumbnail');
     projectThumbnail.src = `./data/${projectData.thumbnail}`;
 
     const infoOnHover = document.createElement('div');
-    infoOnHover.classList.add('project-info-on-hover', 'hidden');
+    infoOnHover.classList.add('project-info-on-hover');
 
     const logo = document.createElement('img');
     logo.src = `./data/${projectData.logo}`;
@@ -95,7 +97,8 @@ async function loadProjects() {
     infoOnHover.append(descriptionBlock);
     infoOnHover.append(stacksBlock);
 
-    projectEl.append(projectThumbnail);
+    projectThumbnailContainer.append(projectThumbnail);
+    projectEl.append(projectThumbnailContainer);
     projectEl.append(infoOnHover);
 
     projectEl.addEventListener('click', () => {
@@ -103,13 +106,11 @@ async function loadProjects() {
     });
 
     projectEl.addEventListener('mouseover', () => {
-      projectThumbnail.classList.add('project-thumbnail-blur');
-      infoOnHover.classList.remove('hidden');
+      projectThumbnail.classList.add('blur');
     });
 
     projectEl.addEventListener('mouseleave', () => {
-      projectThumbnail.classList.remove('project-thumbnail-blur');
-      infoOnHover.classList.add('hidden');
+      projectThumbnail.classList.remove('blur');
     });
 
     projectsContainer.append(projectEl);
