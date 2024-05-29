@@ -131,6 +131,6 @@ contactForm.addEventListener('submit', (e) => {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => console.log('Form successfully submitted'))
+    .then(() => alert('Thank you. I will get back to you shortly!'))
     .catch(console.error);
 });
