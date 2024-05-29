@@ -2,6 +2,7 @@
 
 const sections = document.querySelectorAll('section[id]');
 const projectsContainer = document.querySelector('.projects-container');
+const contactForm = document.querySelector('.contact-form');
 
 window.addEventListener('scroll', navActive);
 
@@ -118,3 +119,18 @@ async function loadProjects() {
 }
 
 loadProjects();
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const myForm = e.target;
+  const formData = new FormData(myForm);
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log('Form successfully submitted'))
+    .catch(console.error);
+});
