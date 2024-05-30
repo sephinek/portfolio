@@ -132,5 +132,6 @@ contactForm.addEventListener('submit', (e) => {
     body: new URLSearchParams(formData).toString(),
   })
     .then(() => alert('Thank you. I will get back to you shortly!'))
+    .then(() => window.scrollTo(0, 0))
     .catch(console.error);
 });
