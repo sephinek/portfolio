@@ -86,17 +86,17 @@ async function loadProjects() {
     <p class="project-description">
       ${projectData.description}
     </p>`;
-    const stacksBlock = document.createElement('div');
-    stacksBlock.classList.add('project-block');
-    stacksBlock.innerHTML = `<h4 class="project-label">Stacks:</h4>
-    <p class="project-stacks">
-      ${projectData.stacks}
+    const techBlock = document.createElement('div');
+    techBlock.classList.add('project-block');
+    techBlock.innerHTML = `<h4 class="project-label">Tech:</h4>
+    <p class="project-tech">
+      ${projectData.tech}
     </p>`;
 
     infoOnHover.append(logo);
     infoOnHover.append(title);
     infoOnHover.append(descriptionBlock);
-    infoOnHover.append(stacksBlock);
+    infoOnHover.append(techBlock);
 
     projectThumbnailContainer.append(projectThumbnail);
     projectEl.append(projectThumbnailContainer);
