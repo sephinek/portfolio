@@ -2,8 +2,8 @@
   {
     "id": 1,
     "title": "Not Tomorrow Ecommerce App",
-    "description": "An innovative app uses text recognition to extract text from live video or images, making it easy to capture and digitize text for quick access anywhere, anytime.",
-    "tech": "React.js, Firebase, React Query, React-responsive-carousel, Vite, Deployed by Netlify",
+    "description": "An online fashion hub featuring firebase authentication for admin product updates, seamless Google sign-in/out capabilities, product filtering, search function, and swift loading times, hosted on Netlify for effortless CI/CD.",
+    "tech": "React.js, Firebase, React Query, Cloudinary, React-responsive-carousel, Vite, Deployed by Netlify",
     "logo": "imgs/not-tomorrow-logo.png",
     "thumbnail": "imgs/not-tomorrow-thumbnail.png",
     "url": "https://not-tomorrow-ecommerce.netlify.app/"
