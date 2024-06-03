@@ -27,7 +27,7 @@ html {
 body {
   height: 100vh;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   font-family: 'jost', sans-serif;
@@ -190,6 +190,9 @@ button {
 .logo {
   width: 27px;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-container {
@@ -251,7 +254,7 @@ button {
   border: #fff solid 1px;
   border-radius: 10px;
   height: 70rem;
-  width: fit-screen;
+  max-width: fit-screen;
 }
 
 .hero-block {
@@ -516,4 +519,415 @@ button {
 
 .copyright {
   font-size: 1.3rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 2300px) {
+  .nav-btns {
+    right: 17%;
+  }
+}
+
+@media (max-width: 2100px) {
+  .nav-btns {
+    right: 16%;
+  }
+}
+
+@media (max-width: 1800px) {
+  .nav-btns {
+    right: 13%;
+  }
+}
+
+@media (max-width: 1700px) {
+  .nav-btns {
+    right: 10%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .nav-btns {
+    right: 10%;
+  }
+}
+
+@media (max-width: 1500px) {
+  :root {
+    --hero-max-width: 1200px;
+  }
+
+  .nav-btns {
+    right: 5%;
+  }
+}
+
+@media (max-width: 1260px) {
+  :root {
+    --max-width: 1100px;
+    --hero-max-width: 1100px;
+  }
+
+  .section-heading {
+    font-size: 2.5rem;
+  }
+
+  .header {
+    font-size: 1.4rem;
+  }
+
+  .btn-contact {
+    font-size: 1.2rem;
+  }
+
+  .nav-btns {
+    width: 5rem;
+    height: 21rem;
+    border-radius: 21px;
+  }
+
+  .star-btn-img {
+    width: 40px;
+  }
+
+  .hero {
+    background: url('/img/hero-bg.png') 100%;
+  }
+
+  .greeting {
+    font-size: 9rem;
+  }
+
+  .title {
+    font-size: 10rem;
+  }
+
+  .position {
+    font-size: 1.8rem;
+  }
+
+  .next-section-block {
+    font-size: 1.3rem;
+  }
+
+  .btn-arrow-down {
+    width: 70px;
+  }
+
+  .contact-paragraph {
+    font-size: 1.6rem;
+  }
+
+  .contact-form label {
+    font-size: 1.5rem;
+  }
+
+  .footer-email-block {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1180px) {
+  :root {
+    --max-width: 1000px;
+    --hero-max-width: 1000px;
+  }
+}
+
+@media (max-width: 1080px) {
+  :root {
+    --max-width: 950px;
+    --hero-max-width: 900px;
+  }
+
+  .section-heading {
+    font-size: 2.2rem;
+  }
+
+  .greeting {
+    font-size: 8rem;
+  }
+
+  .title {
+    font-size: 9rem;
+  }
+
+  .position {
+    font-size: 1.6rem;
+  }
+
+  .about-text-block {
+    font-size: 1.4rem;
+  }
+
+  .about-img {
+    width: 17rem;
+  }
+
+  .project {
+    height: auto;
+    width: 25rem;
+  }
+
+  .project-info-on-hover {
+    padding: 0 1.5rem;
+  }
+
+  .project:hover .project-info-on-hover {
+    top: 5%;
+  }
+
+  .project-logo {
+    width: 2rem;
+    margin-bottom: 0;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .project-block {
+    font-size: 1.3rem;
+  }
+
+  .project-label {
+    font-size: 1.3rem;
+  }
+
+  .contact-paragraph {
+    margin: 0 0 2.5rem 2rem;
+  }
+
+  .form-top {
+    margin-bottom: 2rem;
+  }
+
+  .form-block {
+    gap: 0.5rem;
+  }
+
+  .contact-form {
+    width: 75rem;
+    padding: 4rem;
+  }
+
+  .contact-form label {
+    font-size: 1.4rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.4rem;
+  }
+
+  .contact-form input {
+    width: 32rem;
+  }
+
+  .contact-form .btn-contact {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (max-width: 990px) {
+  :root {
+    --max-width: 850px;
+    --hero-max-width: 850px;
+  }
+
+  .hero-container {
+    height: 55rem;
+  }
+
+  .greeting {
+    font-size: 6rem;
+  }
+
+  .title {
+    font-size: 7rem;
+  }
+
+  .position {
+    font-size: 1.5rem;
+  }
+
+  .about-paragraph {
+    width: 60rem;
+  }
+
+  .contact-form {
+    width: 65rem;
+    padding: 3rem;
+  }
+
+  .contact-form label {
+    font-size: 1.4rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.4rem;
+  }
+
+  .contact-form input {
+    width: 28rem;
+  }
+
+  .contact-form .btn-contact {
+    margin-top: 2.5rem;
+  }
+
+  .footer-email-block {
+    font-size: 1.3rem;
+  }
+
+  .copyright {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 905px) {
+  :root {
+    --max-width: 750px;
+    --hero-max-width: 750px;
+  }
+
+  .nav-btns {
+    right: 3%;
+  }
+
+  .position {
+    margin-top: 3rem;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+
+  .contact-paragraph {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 810px) {
+  :root {
+    --max-width: 650px;
+    --hero-max-width: 650px;
+  }
+
+  .header {
+    font-size: 1.3rem;
+  }
+
+  .btn-contact {
+    font-size: 1.2rem;
+  }
+
+  .nav-btns {
+    display: none;
+  }
+
+  .about-paragraph {
+    width: 55rem;
+  }
+
+  .contact-form {
+    width: 50rem;
+  }
+
+  .form-top {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-form label {
+    font-size: 1.3rem;
+  }
+
+  .contact-form input {
+    height: 3.5rem;
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.4rem;
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --max-width: 600px;
+    --hero-max-width: 550px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .hero-container {
+    height: 50rem;
+  }
+
+  .greeting {
+    font-size: 5rem;
+  }
+
+  .title {
+    font-size: 6rem;
+  }
+
+  .position {
+    font-size: 1.4rem;
+  }
+
+  .btn-contact {
+    font-size: 1.1rem;
+  }
+
+  .about-paragraph {
+    width: 45rem;
+  }
+
+  .footer-container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 630px) {
+  :root {
+    --max-width: 500px;
+    --hero-max-width: 500px;
+  }
+
+  .hero-container {
+    height: 40rem;
+  }
+
+  .greeting {
+    font-size: 5rem;
+  }
+
+  .title {
+    font-size: 6rem;
+  }
+
+  .position {
+    font-size: 1.3rem;
+  }
+
+  .about {
+    height: 90vh;
+  }
+
+  .about-img {
+    width: 13rem;
+  }
 }
