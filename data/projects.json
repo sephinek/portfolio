@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Not Tomorrow Ecommerce App",
-    "description": "An online fashion hub featuring firebase authentication for admin product updates, seamless Google sign-in/out capabilities, product filtering, search function, and swift loading times, hosted on Netlify for effortless CI/CD.",
+    "description": "An online fashion hub featuring firebase database, and authentication for admin product updates, seamless Google sign-in/out capabilities, product filtering, search function, and swift loading times, hosted on Netlify for effortless CI/CD.",
     "tech": "React.js, Firebase, React Query, Cloudinary, React-responsive-carousel, Vite, Deployed by Netlify",
     "logo": "imgs/not-tomorrow-logo.png",
     "thumbnail": "imgs/not-tomorrow-thumbnail.png",
